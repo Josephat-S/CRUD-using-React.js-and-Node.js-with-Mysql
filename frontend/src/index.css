@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "tailwindcss";
+
+@layer base {
+    body{
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    
+    }
+  table{
+    @apply justify-between items-center mx-auto mt-10 mb-10 max-w-[800px] text-sm text-left;
+    & tr{
+        @apply border-b border-slate-300;
+    }
+    & td{
+        @apply p-4;
+    }
+}
+}
+
+@layer components{
+    .container{
+        @apply flex justify-center items-center h-screen;
+    }
+    .table-container{
+        @apply rounded p-3 border-2 border-slate-300 shadow-lg max-w-[800px] w-full;
+        & h2{
+            @apply text-2xl font-bold;
+        }
+    }
+    .create-link{
+        @apply flex justify-self-end-safe w-fit p-2 rounded mb-3 bg-green-600 text-white;
+    }
+    .read-button{
+        @apply bg-green-500 text-white p-2 rounded mx-2 cursor-pointer hover:bg-green-700 duration-200;
+    }
+    .edit-button{
+        @apply bg-blue-500 text-white p-2 rounded mx-2 cursor-pointer hover:bg-blue-700 duration-200;
+    }
+    .delete-button{
+        @apply bg-red-500 text-white p-2 rounded cursor-pointer hover:bg-red-700 duration-200;
+    }
+    .input-container{
+        @apply flex  gap-5 w-full mt-5;
+        & input{
+            @apply p-2 rounded border border-slate-300 w-full;
+        }
+        & label{
+            @apply p-2 text-lg font-semibold;
+        }
+    }
+}
+
